@@ -14,8 +14,8 @@ import lakshman2 from '../../assets/lakshman2.jpg';
 import lakshman3 from '../../assets/lakshman3.jpg';
 
 import parangkush1 from '../../assets/parangkush.jpg';
-import parangkush2 from '../../assets/img3.jpg';
-import parangkush3 from '../../assets/img7.jpg';
+import parangkush2 from '../../assets/parangkush1.jpg';
+import parangkush3 from '../../assets/parangkush2.jpg';
 
 const leaders = [
   {

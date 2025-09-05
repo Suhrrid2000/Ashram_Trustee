@@ -53,7 +53,8 @@ const Contact = () => {
 
     try {
       // 1️⃣ Call backend API to store feedback
-      const response = await fetch('http://localhost:8000/api/feedbacks', {
+      //const response = await fetch('http://localhost:8000/api/feedbacks', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedbacks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

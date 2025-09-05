@@ -30,7 +30,8 @@ const ManageEvents = () => {
   // Fetch events
   const fetchEvents = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/events');
+      //const res = await fetch('http://localhost:8000/api/events');
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/events`);
       const data = await res.json();
       setEvents(data);
       setCurrentPage(1);
@@ -81,10 +82,15 @@ const ManageEvents = () => {
     setLoading(true);
     setMessage('');
     setMessageType('');
-
+    /*
     const url = editId
       ? `http://localhost:8000/api/events/${editId}`
       : 'http://localhost:8000/api/events';
+    */
+    const url = editId
+    ? `${import.meta.env.VITE_API_URL}/api/events/${editId}`
+    : `${import.meta.env.VITE_API_URL}/api/events`;
+    
     const method = editId ? 'PUT' : 'POST';
 
     try {
@@ -152,7 +158,8 @@ const ManageEvents = () => {
 
   const handleDeleteConfirmed = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/events/${eventToDelete}`, {
+      //const res = await fetch(`http://localhost:8000/api/events/${eventToDelete}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/events/${eventToDelete}`, {
         method: 'DELETE',
       });
 

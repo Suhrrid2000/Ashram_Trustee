@@ -28,7 +28,8 @@ const ManageAnnouncements = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/announcements`);
+      //const res = await fetch(`http://localhost:8000/api/announcements`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/announcements`);
       const data = await res.json();
       setAnnouncements(data || []);
     } catch (err) {
@@ -52,9 +53,13 @@ const ManageAnnouncements = () => {
 
     try {
       const method = editId ? "PUT" : "POST";
-      const url = editId
+      /*const url = editId
         ? `http://localhost:8000/api/announcements/${editId}`
         : `http://localhost:8000/api/announcements`;
+      */
+      const url = editId 
+      ? `${import.meta.env.VITE_API_URL}/api/announcements/${editId}`
+      : `${import.meta.env.VITE_API_URL}/api/announcements`;
 
       const res = await fetch(url, {
         method,
@@ -105,9 +110,15 @@ const ManageAnnouncements = () => {
 
   const handleDeleteConfirmed = async () => {
     try {
-      const res = await fetch(
+      /*const res = await fetch(
         `http://localhost:8000/api/announcements/${announcementToDelete}`,
         { method: "DELETE" }
+      );
+      */
+
+      const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/announcements/${announcementToDelete}`,
+      { method: "DELETE" }
       );
 
       if (res.ok) {

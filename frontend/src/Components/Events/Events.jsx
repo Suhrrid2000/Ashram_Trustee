@@ -31,8 +31,11 @@ const Events = () => {
     const fetchData = async () => {
       try {
         const [eventsRes, announcementsRes] = await Promise.all([
-          fetch("http://localhost:8000/api/events"),
-          fetch("http://localhost:8000/api/announcements"),
+          //fetch("http://localhost:8000/api/events"),
+          //fetch("http://localhost:8000/api/announcements"),
+
+          fetch(`${import.meta.env.VITE_API_URL}/api/events`),
+          fetch(`${import.meta.env.VITE_API_URL}/api/announcements`),
         ]);
 
         const eventsData = await eventsRes.json();
