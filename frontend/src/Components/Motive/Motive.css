@@ -1,0 +1,33 @@
+.motive-section {
+  background-color: #fdf8f3; /* soft cream background */
+  padding: 3rem 10%;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #3a2a1a;
+  line-height: 1.8;
+}
+
+.motive-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #c94f0c; /* warm devotional orange */
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.motive-section p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Override for mantra */
+.mantra {
+  text-align: center !important; /* force override of justify */
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 2;
+  margin: 2rem auto;
+  color: #5a2d0c; /* deep devotional brown */
+  font-weight: 500;
+  max-width: 600px;
+}

@@ -1,0 +1,293 @@
+.events-container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fdf7f2;
+  padding: 20px;
+  padding-top: 100px; /* because navbar */
+}
+
+/* Event Detail View */
+.event-detail-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: #fff;
+  color: #d84315;
+  border: 2px solid #d84315;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #d84315;
+  color: #fff;
+}
+
+.event-detail {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.event-detail-image-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.event-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.event-detail-info {
+  flex: 2;
+}
+
+.event-detail-info h2 {
+  color: #d84315;
+  margin-bottom: 15px;
+}
+
+.event-detail-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Existing list view and sidebar styles remain same */
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.announcements-sidebar {
+  flex: 1;
+  max-width: 300px;
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 600px;
+}
+
+.announcements-sidebar h2 {
+  color: #e65100;
+  margin-bottom: 15px;
+}
+
+.announcements-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.announcements-sidebar li {
+  background: #fff8f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #e65100;
+  border-radius: 6px;
+}
+
+.announcements-sidebar li h4 {
+  color: #bf360c;
+  margin-bottom: 5px;
+}
+
+.events-main {
+  flex: 3;
+}
+
+.events-section-title {
+  color: #d84315;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  display: flex;
+  gap: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease;
+}
+
+.event-item:hover {
+  background: #fff9f4;
+}
+
+.event-thumbnail {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-info h3 {
+  color: #d84315;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.event-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.event-description {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  background: #d84315;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background: #bf360c;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  background: #fff;
+  border: 1px solid #d84315;
+  color: #d84315;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #d84315;
+  color: #fff;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  background: #d84315;
+  color: #fff;
+}
+
+.dots {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #999;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .announcements-sidebar {
+    max-width: 100%;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+
+  .event-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-thumbnail {
+    width: 100%;
+    height: 200px;
+  }
+
+  .event-info {
+    text-align: center;
+  }
+
+  .event-detail {
+    flex-direction: column;
+  }
+
+  .event-detail-image-container {
+    max-width: 100%;
+  }
+}
+
+/* Devotional Border for Event Images */
+.event-thumbnail,
+.event-detail-image {
+  border: 6px solid transparent;
+  border-radius: 12px;
+  padding: 4px;
+  background: linear-gradient(135deg, #ffd700, #e65100);
+  box-shadow: 0 4px 10px rgba(230, 81, 0, 0.3);
+  position: relative;
+}
+
+/* Optional inner glow effect for richness */
+.event-thumbnail::before,
+.event-detail-image::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f8e1b4,
+    #f8e1b4 10px,
+    #ffd700 10px,
+    #ffd700 20px
+  );
+  z-index: -1;
+  opacity: 0.2;
+}
+

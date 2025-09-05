@@ -1,0 +1,127 @@
+/* Container covers full screen and centers the login box */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 20px;
+  position: relative;
+}
+
+/* The login card */
+.login-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading */
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Form layout */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+.login-box input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Login button */
+.login-box button[type="submit"] {
+  padding: 12px 15px;
+  background-color: #e6802e;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button[type="submit"]:hover {
+  background-color: #cc6e20;
+}
+
+/* Login note */
+.login-note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Reusable back button styling */
+.back-btn {
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 2px solid #e6802e;
+  color: #e6802e;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Back button hover */
+.back-btn:hover {
+  background-color: #e6802e;
+  color: #fff;
+}
+
+/* Position it to top-left of the page */
+.top-left-btn {
+  position: absolute;
+  top: 100px; /* push it below the navbar */
+  left: 20px;
+  z-index: 10; /* ensure it's above most content */
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .login-box input {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .login-box button[type="submit"] {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .back-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .top-left-btn {
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -1,0 +1,123 @@
+/* Navbar container */
+nav {
+  width: 100%;
+  background: #E6802E;
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: 1px solid #f6f2f0;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+/* Navigation items */
+nav ul li {
+  display: inline;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 16px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #e6802e;
+}
+
+/* Hover underline (About Us & arrow) */
+.hover-underline:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+/* About Us + arrow span */
+.about-us-link,
+.dropdown-arrow {
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #FFE0B2;
+  border: 1px solid #fff;
+  min-width: 140px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f4b665;
+}
+
+/* ACTIVE STYLES */
+
+/* Active top-level nav items (including login, events, contact) */
+/* Active top-level nav items (like Events, Contact, Login) */
+nav ul li a.active {
+  background-color: #b85700;  /* Deep orange or brownish */
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+}
+
+
+/* Active dropdown items (orangish highlight) */
+.dropdown-menu li.active {
+  background-color: #f4b665;   /* Light orange */
+  font-weight: bold;
+  color: #5a3b00;              /* Optional darker brown text */
+}

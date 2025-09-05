@@ -1,0 +1,40 @@
+.manage-dashboard {
+  padding: 2rem;
+  text-align: center;
+  padding: 140px 20px 40px;
+}
+
+.manage-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.manage-card {
+  background-color: #fff5e1;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manage-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.manage-card h2 {
+  margin-bottom: 0.5rem;
+  color: #ff6600;
+}
+
+.manage-card p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+

@@ -1,0 +1,405 @@
+/* General Container */
+.manage-container {
+  padding: 2rem 1rem;
+  padding-top: 6rem; /* Space for fixed navbar */
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff6e5, #ffe4cc);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  flex: 1 1 auto;
+  padding: 0.75rem 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  background-color: #fff3e0;
+  border: 2px solid #ffa726;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #e65100;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabs button.active {
+  background-color: #ffa726;
+  color: white;
+}
+
+/* Form Containers */
+.form-container,
+.view-container {
+  background-color: #fffdf6;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.2);
+}
+
+/* Headings */
+.form-container h2,
+.view-container h2 {
+  text-align: center;
+  color: #d84315;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #e65100;
+  font-weight: 500;
+}
+
+/* Inputs & Textarea */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 2px solid #ffa726;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fffaf0;
+}
+
+/* Submit Button */
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #fb8c00;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+form button:disabled {
+  background-color: #ffc107;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 1rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 1rem;
+  background-color: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #c82333;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   Event List & Cards
+===================== */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  border: 2px solid #ffe0b2;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff8f0;
+  box-shadow: 0 2px 6px rgba(255, 152, 0, 0.1);
+}
+
+.event-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ffd180;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-details h3 {
+  margin: 0 0 0.5rem;
+  color: #e65100;
+}
+
+.event-details p {
+  margin: 0.25rem 0;
+  color: #6d4c41;
+  font-size: 0.95rem;
+}
+
+.event-actions {
+  margin-top: 0.75rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #ffb74d;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #ffa000;
+}
+
+.delete-btn {
+  background-color: #ef5350;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* =====================
+   Mobile Responsiveness
+===================== */
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabs button {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .form-container,
+  .view-container {
+    padding: 1.25rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .event-details {
+    margin-top: 1rem;
+  }
+
+  .event-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Pagination Container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Pagination Buttons */
+.page-btn {
+  background-color: #fff3e0;
+  border: 2px solid #ffa726;
+  color: #e65100;
+  padding: 0.5rem 0.85rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 36px;
+  text-align: center;
+  user-select: none;
+}
+
+.page-btn:hover:not(:disabled) {
+  background-color: #ffa726;
+  color: white;
+}
+
+.page-btn:disabled {
+  background-color: #ffe0b2;
+  border-color: #ffd180;
+  color: #b98400;
+  cursor: not-allowed;
+}
+
+/* Active Page */
+.page-btn.active {
+  background-color: #ffa726;
+  color: white;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal-box {
+  background-color: #fffaf0;
+  border: 2px solid #ffa726;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+  animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-box h3 {
+  color: #d84315;
+  margin-bottom: 1rem;
+}
+
+.modal-box p {
+  color: #6d4c41;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cancel-btn,
+.confirm-delete-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.confirm-delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background-color: #c62828;
+}
+
+form input[type="file"] {
+  border: none;
+  background: none;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+
+
+
