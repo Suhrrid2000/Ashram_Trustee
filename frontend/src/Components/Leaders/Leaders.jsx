@@ -1,21 +1,21 @@
 import React, { useState, useRef } from 'react';
 import './Leaders.css';
 
-import ramanuja1 from '../../assets/ramanuj_1.png';
-import ramanuja2 from '../../assets/ramanuj_2.png';
-import ramanuja3 from '../../assets/ramanuj_3.png';
+import ramanuja1 from '@/assets/ramanuj_1.png';
+import ramanuja2 from '@/assets/ramanuj_2.png';
+import ramanuja3 from '@/assets/ramanuj_3.png';
 
-import sitaram1 from '../../assets/sitaram.jpg';
-import sitaram2 from '../../assets/sitaram1.jpg';
-import sitaram3 from '../../assets/sitaram3.jpg';
+import sitaram1 from '@/assets/sitaram.jpg';
+import sitaram2 from '@/assets/sitaram1.jpg';
+import sitaram3 from '@/assets/sitaram3.jpg';
 
-import lakshman1 from '../../assets/lakshman1.jpg';
-import lakshman2 from '../../assets/lakshman2.jpg';
-import lakshman3 from '../../assets/lakshman3.jpg';
+import lakshman1 from '@/assets/lakshman1.jpg';
+import lakshman2 from '@/assets/lakshman2.jpg';
+import lakshman3 from '@/assets/lakshman3.jpg';
 
-import parangkush1 from '../../assets/parangkush.jpg';
-import parangkush2 from '../../assets/parangkush1.jpg';
-import parangkush3 from '../../assets/parangkush2.jpg';
+import parangkush1 from '@/assets/parangkush.jpg';
+import parangkush2 from '@/assets/parangkush1.jpg';
+import parangkush3 from '@/assets/parangkush2.jpg';
 
 const leaders = [
   {

@@ -17,10 +17,7 @@ const Manage = () => {
           <h2>Manage Announcements</h2>
           <p>Post important updates and announcements.</p>
         </div>
-        <div className="manage-card" onClick={() => navigate('/manage/news')}>
-          <h2>Manage News</h2>
-          <p>Update news articles and highlights.</p>
-        </div>
+        
       </div>
     </div>
   );

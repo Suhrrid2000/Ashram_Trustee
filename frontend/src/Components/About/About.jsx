@@ -1,9 +1,9 @@
 import React from 'react';
 import './About.css';
 
-import math1 from '../../assets/img3.jpg';
-import math2 from '../../assets/img7.jpg';
-import math3 from '../../assets/Trial_Logo.jpg';
+import math1 from '@/assets/img3.jpg';
+import math2 from '@/assets/img7.jpg';
+import math3 from '@/assets/Trial_Logo.jpg';
 
 const HistorySection = () => {
   return (

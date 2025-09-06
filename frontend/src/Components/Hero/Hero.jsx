@@ -2,9 +2,11 @@
 
 import React from 'react'
 import './Hero.css'
-import dark_arrow from '../../assets/dark-arrow.png'
+//import dark_arrow from '../../assets/dark-arrow.png'
+import dark_arrow from '@/assets/dark-arrow.png'
 //import backgroundVideo from '../../assets/Trial_Video.mp4'
-import backgroundVideo from '../../assets/Test_Video.mp4'
+//import backgroundVideo from '../../assets/Test_Video.mp4'
+import backgroundVideo from '@/assets/Test_Video.mp4'
 const Hero = ({ onExploreClick }) => {
 
 
