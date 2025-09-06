@@ -235,7 +235,7 @@ const Events = () => {
 
         {/* Main Events Section */}
         <main className="events-main">
-          <h2 className="events-section-title">Upcoming Events</h2>
+          <h2 className="events-section-title">Recent & Upcoming Events</h2>
           {events.length === 0 ? (
             <p>No events available.</p>
           ) : (

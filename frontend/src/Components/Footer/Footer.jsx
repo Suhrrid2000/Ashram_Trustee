@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section about">
-          <h3>Shri Ramanuj Sitaram Math</h3>
+          <h3>Sree Ramanuj Sitaram Math - Parankush Sevak Sangha</h3>
           <p>Serving humanity through spiritual and social services. Join us in our mission to uplift and enlighten.</p>
         </div>
 
@@ -25,8 +25,8 @@ const Footer = () => {
         <div className="footer-section contact">
           <h4>Contact</h4>
           <p>Email: ramanuj.sitarammath@gmail.com</p>
-          <p>Phone: +91-9330083320</p>
-          <p>Location: Tribeni, West Bengal, India</p>
+          <p>Phone: +91-8697059122</p>
+          <p>Location: Tribeni, Hooghly, West Bengal, India</p>
         </div>
 
         <div className="footer-section social">
@@ -35,13 +35,8 @@ const Footer = () => {
             <a href="https://www.facebook.com/ramanujsitarammath" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com/ramanujmath" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/ramanujsitarammath" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@ramanujsitarammath" target="_blank" rel="noopener noreferrer">
+            
+            <a href="https://www.youtube.com/@SreeRamanujSitaramMath" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube"></i>
             </a>
           </div>
@@ -49,7 +44,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Shri Ramanuj Sitaram Math. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Sree Ramanuj Sitaram Math. All rights reserved.</p>
       </div>
     </footer>
   );
