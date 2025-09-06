@@ -1,7 +1,7 @@
 /* Navbar container */
 nav {
   width: 100%;
-  background: #E6802E;
+  background: linear-gradient(to right, #964c0f, #bf6a25);
   color: #fff;
   padding: 4px 0;
   position: fixed;
@@ -13,6 +13,7 @@ nav {
   z-index: 10;
   border-bottom: 1px solid #f6f2f0;
 }
+
 
 /* Logo */
 .logo {
@@ -105,8 +106,8 @@ nav ul li a:hover {
 /* Active top-level nav items (including login, events, contact) */
 /* Active top-level nav items (like Events, Contact, Login) */
 nav ul li a.active {
-  background-color: #b85700;  /* Deep orange or brownish */
-  color: white;
+  background-color: white;  /* Deep orange or brownish */
+  color: #9c6416;
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 6px;
@@ -120,4 +121,107 @@ nav ul li a.active {
   background-color: #f4b665;   /* Light orange */
   font-weight: bold;
   color: #5a3b00;              /* Optional darker brown text */
+}
+
+/* Wrapper for logo and title */
+.logo-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 18px;
+}
+
+/* Styled text beside logo */
+.site-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFF4E0;  /* Creamy white-gold for contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Soft shadow for depth */
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Navbar container */
+nav.navbar {
+  width: 100%;
+  background: linear-gradient(to right, #964c0f, #bf6a25);
+  color: #fff;
+  padding: 4px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  border-bottom: 1px solid #f6f2f0;
+  box-sizing: border-box;
+}
+
+/* Flex container sides */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.navbar-right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Ensure ul doesn’t wrap under */
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo and Title */
+.logo-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFF4E0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #FFE0B2;
+  border: 1px solid #fff;
+  min-width: 140px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Add this */
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  display: block; /* stack vertically */
+  width: 100%;    /* ensure full width */
+  padding: 10px 15px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
 }

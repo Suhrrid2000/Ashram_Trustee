@@ -93,8 +93,15 @@ const Navbar = () => {
   }, [location, isHome]);
 
   return (
-    <nav className="container">
-      <img src={logo} alt="logo" className="logo" />
+  <nav className="navbar">
+    <div className="navbar-left">
+      <div className="logo-title-wrapper">
+        <img src={logo} alt="logo" className="logo" />
+        <span className="site-title">Tridandi Swami Parankush Sevak Sangha</span>
+      </div>
+    </div>
+
+    <div className="navbar-right">
       <ul>
         <li className="dropdown" ref={dropdownRef}>
           <span
@@ -178,8 +185,9 @@ const Navbar = () => {
           )}
         </li>
       </ul>
-    </nav>
-  );
+    </div>
+  </nav>
+);
 };
 
 export default Navbar;
