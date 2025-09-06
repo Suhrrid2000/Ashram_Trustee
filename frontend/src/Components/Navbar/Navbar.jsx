@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
-//import logo from '../../assets/Trial_Logo.jpg';
 import logo from '@/assets/Logo.png';
 import { useAuth } from '../../AuthContext.jsx';
 
@@ -11,6 +10,7 @@ const Navbar = () => {
   const { isLoggedIn, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const isHome = location.pathname === '/';
@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logout();
     navigate('/login');
+    setMenuOpen(false);
   };
 
   const scrollToSection = (id) => {
@@ -36,13 +37,10 @@ const Navbar = () => {
     }
 
     setShowDropdown(false);
+    setMenuOpen(false);
   };
 
   const handleAboutClick = () => {
-    setShowDropdown(prev => !prev);
-  };
-
-  const handleArrowClick = () => {
     setShowDropdown(prev => !prev);
   };
 
@@ -75,7 +73,6 @@ const Navbar = () => {
     document.addEventListener('mousedown', handleClickOutside);
     window.addEventListener('scroll', handleScroll);
 
-    // ✅ Reset activeSection correctly based on hash or lack of it
     if (isHome) {
       if (location.hash) {
         setActiveSection(location.hash.replace('#', ''));
@@ -93,101 +90,109 @@ const Navbar = () => {
   }, [location, isHome]);
 
   return (
-  <nav className="navbar">
-    <div className="navbar-left">
-      <div className="logo-title-wrapper">
-        <img src={logo} alt="logo" className="logo" />
-        <span className="site-title">Tridandi Swami Parankush Sevak Sangha</span>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <div className="logo-title-wrapper">
+          <img src={logo} alt="logo" className="logo" />
+          <span className="site-title">Tridandi Swami Parankush Sevak Sangha</span>
+        </div>
       </div>
-    </div>
 
-    <div className="navbar-right">
-      <ul>
-        <li className="dropdown" ref={dropdownRef}>
-          <span
-            className="about-us-link hover-underline"
-            onClick={handleAboutClick}
-          >
-            About Us
-          </span>
-          <span
-            className="dropdown-arrow hover-underline"
-            onClick={handleArrowClick}
-          >
-            ▾
-          </span>
+      <div className="hamburger" onClick={() => setMenuOpen(prev => !prev)}>
+        ☰
+      </div>
 
-          {showDropdown && (
-            <ul className="dropdown-menu">
-              <li
-                className={isHome && activeSection === 'leaders' ? 'active' : ''}
-                onClick={() => scrollToSection('leaders')}
-              >
-                Paramparas
-              </li>
-              <li
-                className={isHome && activeSection === 'about' ? 'active' : ''}
-                onClick={() => scrollToSection('about')}
-              >
-                History
-              </li>
-              <li
-                className={isHome && activeSection === 'motive' ? 'active' : ''}
-                onClick={() => scrollToSection('motive')}
-              >
-                Motive
-              </li>
-            </ul>
-          )}
-        </li>
+      <div className={`navbar-right ${menuOpen ? 'open' : ''}`}>
+        <ul>
+          <li className="dropdown" ref={dropdownRef}>
+            <span
+              className="about-us-link hover-underline"
+              onClick={handleAboutClick}
+            >
+              About Us
+            </span>
+            <span
+              className="dropdown-arrow hover-underline"
+              onClick={handleAboutClick}
+            >
+              ▾
+            </span>
 
-        <li>
-          <Link
-            to="/events"
-            className={location.pathname === '/events' ? 'active' : ''}
-          >
-            Announcements & Events
-          </Link>
-        </li>
+            {showDropdown && (
+              <ul className="dropdown-menu">
+                <li
+                  className={isHome && activeSection === 'leaders' ? 'active' : ''}
+                  onClick={() => scrollToSection('leaders')}
+                >
+                  Paramparas
+                </li>
+                <li
+                  className={isHome && activeSection === 'about' ? 'active' : ''}
+                  onClick={() => scrollToSection('about')}
+                >
+                  History
+                </li>
+                <li
+                  className={isHome && activeSection === 'motive' ? 'active' : ''}
+                  onClick={() => scrollToSection('motive')}
+                >
+                  Motive
+                </li>
+              </ul>
+            )}
+          </li>
 
-        <li>
-          <Link
-            to="/contact"
-            className={location.pathname === '/contact' ? 'active' : ''}
-          >
-            Contact Us
-          </Link>
-        </li>
-
-        {isLoggedIn && (
           <li>
             <Link
-              to="/manage"
-              className={location.pathname === '/manage' ? 'active' : ''}
+              to="/events"
+              className={location.pathname === '/events' ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
             >
-              Manage Site
+              Announcements & Events
             </Link>
           </li>
-        )}
 
-        <li>
-          {isLoggedIn ? (
-            <button className="logout-btn" onClick={handleLogout}>
-              Logout
-            </button>
-          ) : (
+          <li>
             <Link
-              to="/login"
-              className={location.pathname === '/login' ? 'active' : ''}
+              to="/contact"
+              className={location.pathname === '/contact' ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
             >
-              Member Login
+              Contact Us
             </Link>
+          </li>
+
+          {isLoggedIn && (
+            <li>
+              <Link
+                to="/manage"
+                className={location.pathname === '/manage' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Manage Site
+              </Link>
+            </li>
           )}
-        </li>
-      </ul>
-    </div>
-  </nav>
-);
+
+          <li>
+            {isLoggedIn ? (
+              <button className="logout-btn" onClick={handleLogout}>
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className={location.pathname === '/login' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Member Login
+              </Link>
+            )}
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
