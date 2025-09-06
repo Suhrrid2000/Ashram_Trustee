@@ -19,7 +19,7 @@ const Hero = ({ onExploreClick }) => {
         <div className='overlay'>
             <div className='hero-text'>  
             <h1>Jay Shri Guru Maharaj Jeu Ki ... JAY</h1>
-            <p>Welcome To The Official Page Of Shri Ramanuj Sitaram Math where you get to know who we are - our history, our motive, 
+            <p>Welcome To The Official Page Of Sree Ramanuj Sitaram Math - Tridandi Swami Parankush Sevak Sangha, where you get to know who we are - our history, our motive, 
                 what we do and a few of our services which we offer for the betterment of humanity. 
             </p>
             <button className='btn' onClick={onExploreClick}>Explore Now <img src={dark_arrow} alt="" /></button>
