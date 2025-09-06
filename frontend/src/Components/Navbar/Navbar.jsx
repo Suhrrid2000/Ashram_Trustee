@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 //import logo from '../../assets/Trial_Logo.jpg';
-import logo from '@/assets/GPT_Logo.png';
+import logo from '@/assets/Logo.png';
 import { useAuth } from '../../AuthContext.jsx';
 
 const Navbar = () => {
