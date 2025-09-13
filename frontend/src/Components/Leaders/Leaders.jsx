@@ -53,7 +53,7 @@ const leaders = [
     ]  
   },
   {
-    name: 'Tridandi Swami Parangkush Ramanuja Jeeyar',
+    name: 'Tridandi Swami Parankush Ramanuja Jeeyar',
     photos: [parangkush1, parangkush2, parangkush3],
     description: [
       'Tridandi Swami Parankush Ramanuja Jeeyar Maharaj, the beloved and cherished spiritual son of Anantashree Thakur Sitaramdas Omkarnath Deva, was the very embodiment of absolute surrender to the Guru (Sri Guru Prapannata). His entire life stood as a shining example of Guru Seva—selfless and unwavering service at the lotus feet of his Master. With the power of surrender as his strength, he led countless souls toward the path of welfare and righteousness. Endowed with immense spiritual wealth, this great Mahatma dedicated his life for the good of others through unending Anna Daan (feeding the hungry), Naam Daan (spreading the Divine Name), and Prema Daan (showering divine love). Those who were blessed with his holy association testified in one voice that he was none other than an incarnation of love itself. Through his compassion, he removed the pangs of poverty and hunger for innumerable suffering beings.',
