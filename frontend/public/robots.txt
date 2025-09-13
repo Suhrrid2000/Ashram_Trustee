@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://swami-parankush-sevak-sangha.org/sitemap.xml
