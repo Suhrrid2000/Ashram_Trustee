@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section about">
           <h3>Sree Ramanuj Sitaram Math - Parankush Sevak Sangha</h3>
-          <p>Serving humanity through spiritual and social services. Join us in our mission to uplift and enlighten.</p>
+          <p>Serving humanity through spiritual and social services. Join our Tribeni Ashram & help us in our mission to uplift and enlighten.</p>
         </div>
 
         <div className="footer-section links">
