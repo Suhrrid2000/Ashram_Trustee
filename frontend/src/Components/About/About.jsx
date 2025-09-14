@@ -44,7 +44,7 @@ const HistorySection = () => {
           To preserve this sacred tradition, Thakurji initiated eight foremost disciples into Tridandi Sannyasa. Among them was our most revered spiritual master—Tridandi Swami Parankusha Rāmānuj Jeeyar Mahārāj—who continues to guide us on the path of devotion and selfless service.
         </p>
         <p className="closing-line">
-          Today, this Ashram stands as a beacon of Dharma, illuminating lives through the eternal wisdom of our Acharyas.
+          Today, our Tribeni Ashram stands as a beacon of Dharma, illuminating lives through the eternal wisdom of our Acharyas.
         </p>
       </div>
     </section>
