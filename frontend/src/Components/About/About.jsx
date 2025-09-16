@@ -4,6 +4,7 @@ import './About.css';
 import math1 from '@/assets/janamdin1.jpg';
 import math2 from '@/assets/history1.jpg';
 import math3 from '@/assets/history2.jpg';
+import logo from '@/assets/Logo.png'; // ✅ Import Logo
 
 const HistorySection = () => {
   return (
@@ -46,6 +47,11 @@ const HistorySection = () => {
         <p className="closing-line">
           Today, our Tribeni Ashram stands as a beacon of Dharma, illuminating lives through the eternal wisdom of our Acharyas.
         </p>
+
+        {/* ✅ Logo Image Below Closing Line */}
+        <div className="history-logo-wrapper">
+          <img src={logo} alt="Ashram Logo" className="history-logo" />
+        </div>
       </div>
     </section>
   );

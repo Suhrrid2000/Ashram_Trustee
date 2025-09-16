@@ -151,12 +151,46 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 500px; /* You can tweak this for larger or smaller watermark */
-  opacity: 0.16; /* Light, subtle effect */
+  opacity: 0.05; /* Light, subtle effect */
   z-index: 0;
 }
 
 .history-content > * {
   position: relative;
   z-index: 1; /* Keeps text above the watermark */
+}
+
+/* ===== Logo Section ===== */
+.history-logo-wrapper {
+  margin: 40px auto 20px;
+  text-align: center;
+}
+
+.history-logo {
+  width: 220px;       /* Default size */
+  height: auto;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+/* For tablets & small laptops */
+@media (min-width: 768px) {
+  .history-logo {
+    width: 280px;
+  }
+}
+
+/* For desktops & large screens */
+@media (min-width: 1200px) {
+  .history-logo {
+    width: 340px;
+  }
+}
+
+/* For very small screens (mobiles) */
+@media (max-width: 480px) {
+  .history-logo {
+    width: 160px;
+  }
 }
 
